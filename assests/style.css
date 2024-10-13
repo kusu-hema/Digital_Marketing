@@ -16,7 +16,6 @@ p{
 }
 
 
-
 .scratch-container {
   position: relative;
   width: 400px; /* Adjust the width as needed */
@@ -40,4 +39,11 @@ p{
   height: 100%;
   z-index: 2; /* Above the hidden image */
 }
+
+
+
+
+
+
+
  
