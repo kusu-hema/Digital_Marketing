@@ -159,7 +159,7 @@
 
 
 
-    <!-- Second  Section -->
+        <!-- Second  Section -->
 
         <section>
             <div class="container py-5">
@@ -167,10 +167,10 @@
                     <!-- Card 1 -->
                     <div class="col">
                         <div class="card bg-grey  p-3 " style="background-color: #A7E0F5; border:none ; border-radius: 16px; ">
-                            <img src="assests/img/1.png"   alt="App 1" style="border-radius: 16px;" >
+                            <img src="https://via.placeholder.com/300x200"   alt="App 1" style="border-radius: 16px;" >
                             <div class="card-body  ">
                                 <!-- <h5 class="card-title">App 1</h5> -->
-                                <p class="card-text ">Welcome to our website, where sustainability meets style.</p>
+                                <p class="card-text">A description of the first app, similar to Chrome Web Store cards.</p>
                                 <!-- <a href="#" class="btn">Add to Chrome</a> -->
                             </div>
                         </div>
@@ -179,7 +179,7 @@
                     <!-- Card 2 -->
                     <div class="col">
                         <div class="card bg-grey  p-3 " style="background-color: #DCFFA8; border:none ; border-radius: 16px; ">
-                            <img src="assests/img/2.png"   alt="App 1" style="border-radius: 16px;" >
+                            <img src="https://via.placeholder.com/300x200"   alt="App 1" style="border-radius: 16px;" >
                             <div class="card-body  ">
                                 <!-- <h5 class="card-title">App 1</h5> -->
                                 <p class="card-text">A description of the first app, similar to Chrome Web Store cards.</p>
@@ -191,7 +191,7 @@
                     <!-- Card 3 -->
                     <div class="col">
                         <div class="card bg-grey  p-3 " style="background-color: #FFEAD0; border:none ; border-radius: 16px; ">
-                            <img src="assests/img/3.png"   alt="App 1" style="border-radius: 16px;" >
+                            <img src="https://via.placeholder.com/300x200"   alt="App 1" style="border-radius: 16px;" >
                             <div class="card-body  ">
                                 <!-- <h5 class="card-title">App 1</h5> -->
                                 <p class="card-text">A description of the first app, similar to Chrome Web Store cards.</p>
@@ -203,7 +203,7 @@
                     <!-- Card 4 -->
                     <div class="col">
                         <div class="card bg-grey  p-3 " style="background-color: #F1D7FF; border:none ; border-radius: 16px; ">
-                            <img src="assests/img/4.png"   alt="App 1" style="border-radius: 16px;" >
+                            <img src="https://via.placeholder.com/300x200"   alt="App 1" style="border-radius: 16px;" >
                             <div class="card-body  ">
                                 <!-- <h5 class="card-title">App 1</h5> -->
                                 <p class="card-text">A description of the first app, similar to Chrome Web Store cards.</p>
@@ -215,7 +215,7 @@
                     <!-- Card 5 -->
                     <div class="col">
                         <div class="card bg-grey  p-3 " style="background-color:  #F0B830; border:none ; border-radius: 16px; ">
-                            <img src="assests/img/5.png"   alt="App 1" style="border-radius: 16px;" >
+                            <img src="https://via.placeholder.com/300x200"   alt="App 1" style="border-radius: 16px;" >
                             <div class="card-body  ">
                                 <!-- <h5 class="card-title">App 1</h5> -->
                                 <p class="card-text">A description of the first app, similar to Chrome Web Store cards.</p>
@@ -238,62 +238,53 @@
 
 
       <!-- Third Section -->
-      <section>
-        <div class="container">
+        <section>
+            <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="scratch-container" style="position: relative; width: 100%; max-width: 100%;">
-                        <img src="assests/img/Untitled design (1).png" 
-                             alt="Hidden Image" class="hidden-image" 
-                             style="width: 100%; height: auto; position: absolute; top: 0; left: 0;"> <!-- Image to reveal -->
-                        <canvas id="scratchCanvas" style="position: absolute; top: 0; left: 0;"></canvas> <!-- Scratchable image -->
-                    </div>
+                <div class="scratch-container" style="position: relative; width: 400px; height: 300px;">
+                    <img src="assests/img/group-people-are-sitting-around-table-with-sign-that-says-digital-marketing_257043-51336.avif" 
+                
+                        alt="Hidden Image" class="hidden-image" 
+                        style="width: 100%; height: 100%; position: absolute; top: 0; left: 0;"> <!-- Image to reveal -->
+                    <canvas id="scratchCanvas" style="position: absolute; top: 0; left: 0;"></canvas> <!-- Scratchable image -->
+                </div>
                 </div>
             </div>
-        </div>
-    
-        <script>
+            </div>
+        
+            <script>
             document.addEventListener('DOMContentLoaded', () => {
                 const canvas = document.getElementById('scratchCanvas');
                 const ctx = canvas.getContext('2d');
                 const img = new Image();
-                const hiddenImage = document.querySelector('.hidden-image');
-    
-                // Set the image source
-                img.src = 'assests/img/Untitled design.png'; // Image to be scratched off
-    
+        
+                // Set canvas dimensions
+                canvas.width = 400; // Match these to your container dimensions
+                canvas.height = 300;
+        
+                // Make sure the file path is correct
+                img.src = 'assests/img/flat-style-digital-marketing-illustration-featuring-mobile-marketing_1033579-91541.avif'; // Image to be scratched off
                 img.onload = () => {
-                    // Set canvas dimensions based on the loaded image's dimensions
-                    canvas.width = hiddenImage.clientWidth;
-                    canvas.height = hiddenImage.clientHeight;
-    
-                    // Draw the overlay image on the canvas
-                    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-    
-                    // Re-calculate dimensions if the window resizes
-                    window.addEventListener('resize', () => {
-                        canvas.width = hiddenImage.clientWidth;
-                        canvas.height = hiddenImage.clientHeight;
-                        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-                    });
+                ctx.drawImage(img, 0, 0, canvas.width, canvas.height); // Draw the overlay image on the canvas
                 };
-    
+        
                 let isDrawing = false;
-    
+        
                 // Function to handle scratching
                 function scratch(e) {
-                    if (!isDrawing) return;
-    
-                    const rect = canvas.getBoundingClientRect();
-                    const x = e.clientX - rect.left;
-                    const y = e.clientY - rect.top;
-    
-                    ctx.globalCompositeOperation = 'destination-out'; // This will clear parts of the image
-                    ctx.beginPath(); // Begin new path for each stroke
-                    ctx.arc(x, y, 15, 0, 2 * Math.PI); // Adjust the 15 for the size of the scratch area
-                    ctx.fill();
+                if (!isDrawing) return;
+        
+                const rect = canvas.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                ctx.globalCompositeOperation = 'destination-out'; // This will clear parts of the image
+                ctx.beginPath(); // Begin new path for each stroke
+                ctx.arc(x, y, 15, 0, 2 * Math.PI); // Adjust the 15 for the size of the scratch area
+                ctx.fill();
                 }
-    
+        
                 // Event Listeners for drawing
                 canvas.addEventListener('mousedown', () => isDrawing = true);
                 canvas.addEventListener('mouseup', () => isDrawing = false);
@@ -301,109 +292,139 @@
                 canvas.addEventListener('touchstart', () => isDrawing = true);
                 canvas.addEventListener('touchend', () => isDrawing = false);
                 canvas.addEventListener('touchmove', (e) => {
-                    const touch = e.touches[0];
-                    const mouseEvent = new MouseEvent('mousemove', {
-                        clientX: touch.clientX,
-                        clientY: touch.clientY
-                    });
-                    scratch(mouseEvent);
+                const touch = e.touches[0];
+                const mouseEvent = new MouseEvent('mousemove', {
+                    clientX: touch.clientX,
+                    clientY: touch.clientY
+                });
+                scratch(mouseEvent);
                 });
             });
-        </script>
-      </section>
-    
+            </script>
+        </section>
             
 
-      <!-- Protofilo -->
-       <section class="my-5">
-        <div class="container">
-            <h1>Our Protofilo</h1>
-            <div class="row">
-                <div class="col-6">
-                    <img src="assests/img/flat-style-digital-marketing-illustration-featuring-mobile-marketing_1033579-91541.avif" alt="image" class="img-fluid">
-                </div>
-                <div class="col-6">
-                    <img src="assests/img/flat-style-digital-marketing-illustration-featuring-mobile-marketing_1033579-91541.avif" alt="image" class="img-fluid">
-                </div>
-                <div class="col-6">
-                    <img src="assests/img/flat-style-digital-marketing-illustration-featuring-mobile-marketing_1033579-91541.avif" alt="image" class="img-fluid">
-                </div>
-                <div class="col-6">
-                    <img src="assests/img/flat-style-digital-marketing-illustration-featuring-mobile-marketing_1033579-91541.avif" alt="image" class="img-fluid">
-                </div>
-            </div>
-        </div>
-       </section>
-
-
-       <!-- Automatic Slide  -->
- 
-       
-       
-      
-      
-       
+        <!-- carousel -->
        
           
-
-       <!-- Footer -->
-       <footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
-        <div class="footer-left" itemscope itemtype="http://schema.org/Organization" class="h-card">
-            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEiX_A56Zyh-QLWDJ-1Ugpp732H8h6l0yuCSXPFl2Nf8N0zUb8WKryx4MQPk0gYtsBW5QWHOWVfGwQawGSGjCVIh0vEsih7bqGGEjO7XVI0aGVC5GWVsRMmTLcmrf3_QeLysrpaAZzXIfA375a5ohMaBXh-Pzq3vA-YVLFHiRwkDRrn0aMu_HnnqD7zCr3Vr=s300" alt="Logo" itemprop="logo" class="u-logo logo" />
-            <h3 itemprop="name" class="p-name">SDavidPrince<span>Space</span></h3>
-            <nav aria-label="Footer Navigation">
-                <p class="footer-links">
-                    <a href="#" class="link-1" itemprop="url">Home</a>
-                    <a href="#" itemprop="url">Blog</a>
-                    <a href="#" itemprop="url">Comics</a>
-                    <a href="#" itemprop="url">Poems</a>
-                    <a href="#" itemprop="url">Gallery</a>
-                    <a href="#" itemprop="url">Contact</a>
-                </p>
-            </nav>
-            <p class="footer-name">S David Prince Name © 2024</p>
-        </div>
-    
-        <div class="footer-center">
-            <div itemscope itemtype="http://schema.org/PostalAddress" class="p-address">
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <p>
-                    <span itemprop="streetAddress" class="p-street-address">123 This is a Street</span>,
-                    <span itemprop="addressLocality" class="p-locality">A Locality</span>,
-                    <span itemprop="addressRegion" class="p-region">Region state</span>,
-                    <span itemprop="postalCode" class="p-postal-code">12345</span>
-                </p>
-            </div>
-            <div>
-                <i class="fa fa-phone" aria-hidden="true"></i>
-                <p itemprop="telephone" class="p-tel">+1 234567890</p>
-            </div>
-            <div>
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-                <p><a href="mailto:support@company.com" itemprop="email" class="u-email">myname@mail.com</a></p>
-            </div>
-        </div>
-    
-        <div class="footer-right">
-            <p class="footer-about">
-                <span>About this site</span>
-                Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
-            </p>
-            <div class="footer-socials">
-                <a href="#" rel="me" aria-label="Facebook" itemprop="sameAs" class="u-url"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#" rel="me" aria-label="Twitter" itemprop="sameAs" class="u-url"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#" rel="me" aria-label="LinkedIn" itemprop="sameAs" class="u-url"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#" rel="me" aria-label="GitHub" itemprop="sameAs" class="u-url"><i class="fa-brands fa-github"></i></a>
-            </div>
-        </div>
-       </footer>
-    
-          
-         
-          
-       
         
+          
+          <!-- Custom CSS -->
+          
+        </head>
+        <body>
+        
+          <!-- Audio Controls -->
+          <audio id="background-music" loop>
+            <source src="https://github.com/ecemgo/mini-samples-great-tricks/raw/main/song-list/stranger-things-luxide-remix-no-copyright-music.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        
+          <button id="play-pause-button">
+            <ion-icon class="audio-icon" id="play-music" name="play"></ion-icon>
+            <ion-icon class="audio-icon hidden" id="pause-music" name="pause"></ion-icon>
+          </button>
+        
+          <!-- Swiper Container -->
+          <div class="container">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/c91f906b-5881-47b1-89e4-e4a69c1961a7" />
+                  <p>Lucas</p>
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/5bc859f0-db4f-4ab4-8f5f-e55977c33eb1" />
+                  <p>Mike</p>
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/d239a63a-a0f8-4213-82dc-bb8d3f0806db" />
+                  <p>Max</p>
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/d239a63a-a0f8-4213-82dc-bb8d3f0806db" />
+                    <p>Max</p>
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/d239a63a-a0f8-4213-82dc-bb8d3f0806db" />
+                    <p>Max</p>
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/d239a63a-a0f8-4213-82dc-bb8d3f0806db" />
+                    <p>Max</p>
+                </div>
+
+
+                <!-- Add more slides here -->
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        
+          <!-- Logo -->
+          <!-- <a href="https://www.youtube.com/@ecemgokdogan/videos" target="_blank" class="logo">
+            <img src="https://assets.codepen.io/9868786/youtube.webp" alt="HTML tutorial" />
+          </a> -->
+        
+          <!-- Swiper JS -->
+          <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+          
+          <!-- Custom JavaScript -->
+          <script>
+            const audio = document.getElementById("background-music");
+            const playPauseButton = document.getElementById("play-pause-button");
+            const playIcon = document.getElementById("play-music");
+            const pauseIcon = document.getElementById("pause-music");
+          
+            let isPlaying = false;
+          
+            function togglePlayPause() {
+              if (isPlaying) {
+                audio.pause();
+                playIcon.classList.remove("hidden");
+                pauseIcon.classList.add("hidden");
+              } else {
+                audio.play();
+                playIcon.classList.add("hidden");
+                pauseIcon.classList.remove("hidden");
+                playPauseButton.remove(); // Completely remove the button after playing
+              }
+              isPlaying = !isPlaying;
+            }
+          
+            playPauseButton.addEventListener("click", togglePlayPause);
+          
+            var swiper = new Swiper(".swiper", {
+              grabCursor: true,
+              centeredSlides: true,
+              slidesPerView: "auto",
+              spaceBetween: 30,
+              speed: 1000,
+              loop: true,  // Enable looping of slides
+              pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+              },
+            });
+          </script>
+          
+          
+          
+           
+          
          
+      
+        
+
+
+
+     
+ 
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 
